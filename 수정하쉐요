@@ -1,6 +1,8 @@
 def calculator():
     print("환영합니다! 4칙연산 계산기입니다.")
-    
+
+    memory = none
+
     while True:
         try:
             num1 = float(input("첫 번째 숫자를 입력하세요: "))
@@ -39,5 +41,9 @@ def calculator():
             continue
 
         print(f"{num1} {operation} {num2} = {result}")
+
+        remember = input("결과를 기억하시겠습니까? (y/n): ")
+        if remember.lower()=='y':
+            memory=result
 
 calculator()
